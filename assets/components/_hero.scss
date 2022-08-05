@@ -1,0 +1,37 @@
+.hero {
+  padding-left: 80px;
+  &__title {
+    @include title();
+
+    text-shadow: 2px 2px 3px rgba(206, 89, 55, 0);
+  }
+  &__content {
+    display: flex;
+    padding-top: 5%;
+  }
+  &__des {
+    @include page();
+    width: 400px;
+  }
+  &__btn {
+    @include btn();
+    width: 150px;
+  }
+  &__start {
+    color: white;
+  }
+  &__img {
+    margin-right: 20px;
+    max-width: 602px;
+    padding-left: 83px;
+  }
+  &__left {
+    padding-top: 5%;
+  }
+  &__footer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 30px;
+  }
+}

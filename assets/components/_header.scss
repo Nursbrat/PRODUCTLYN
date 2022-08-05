@@ -1,0 +1,153 @@
+.header {
+  position: relative;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding-right: 100px;
+  padding-left: 50px;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    padding-right: 54px;
+    margin-left: 220px;
+    padding-top: 10px;
+  }
+  &__item {
+    margin-right: 55px;
+    @include page();
+    &:hover {
+      text-shadow: #e48b0ddd;
+      font-size: larger;
+    }
+  }
+  &__btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -12px;
+    margin-right: 150px;
+    background-color: white;
+    @include page();
+  }
+  &__white {
+    width: 112px;
+    padding: 16px 1px;
+    border-radius: 5px;
+    margin-left: 14px;
+    border: 1px solid rgb(77, 171, 192);
+    margin-right: 14px;
+    box-shadow: inset 0 0 0 0 #54b3d6;
+    color: #54b3d6;
+    transition: color 0.3s ease-in-out, 0.3s ease-in-out;
+
+    &:hover {
+      color: #fff;
+      box-shadow: inset 200px 0 0 0 #54b3d6;
+    }
+  }
+
+  &__orange {
+    border-radius: 5px;
+    padding: 16px 1px;
+    width: 112px;
+    color: white;
+    background-color: orange;
+    border: 1px solid orange;
+    box-shadow: inset 0 0 0 0 #e48b0ddd;
+    transition: color 0.3s ease-in-out, 0.3s ease-in-out;
+
+    &__hover{
+      background-color: black;
+    }
+  }
+
+
+  &__link {
+   @include page();
+  }
+  &__linkble {
+    color: black;
+  }
+}
+.burger {
+  display: none;
+
+  &__line {
+    width: 30px;
+    height: 5px;
+    background: #000;
+    margin: 3px 0;
+    display: block;
+  }
+
+  &__menu {
+    position: absolute;
+    right: 0;
+    top: 30px;
+  }
+
+  &__list {
+    padding: 40px 0;
+    width: 50vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    background: rgb(83, 60, 60);
+    display: none;
+  }
+
+  &__close {
+    display: none;
+    cursor: alias;
+  }
+  &__btns {
+    display: none;
+    position: absolute;
+    left: 100px;
+  }
+
+  &.active &__close {
+    font-size: 25px;
+    font-weight: 900;
+    display: block;
+  }
+
+  &.active &__nav {
+    display: flex;
+  }
+
+  &.active &__line {
+    display: none;
+  }
+  &.active &__btns {
+    display: block;
+  }
+}
+@media screen and (max-width: 770px) {
+  .header {
+    &__content {
+      display: flex;
+      justify-content: space-around;
+    }
+    &__item {
+      display: none;
+    }
+
+    &__nav {
+      display: none;
+    }
+  }
+
+  .burger {
+    display: block;
+  }
+}

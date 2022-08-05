@@ -1,0 +1,66 @@
+@mixin df {
+  display: flex;
+}
+@mixin forcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin font($family, $style, $weight, $size, $height, $color) {
+  font-family: $family;
+  font-style: $style;
+  font-weight: $weight + px;
+  font-size: $size + px;
+  line-height: $height + px;
+  color: $color;
+}
+@mixin title() {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700px;
+  font-size: 45px;
+  color: $title;
+  width: 550px;
+}
+
+@mixin subtitle {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300px;
+  font-size: 45px;
+  color: $title;
+  max-width:700px;
+
+}
+
+@mixin name {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 200px;
+  font-size: 20px;
+  color: $title;
+}
+@mixin page {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100px;
+  font-size: 18px;
+  color: $des;
+}
+@mixin btn {
+  border-radius: 5px;
+  padding: 21px 30px;
+  background-color: orange;
+  border: 1px solid orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin linkbtn{
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100px;
+  font-size: 15px;
+  color: $btn;
+
+}
