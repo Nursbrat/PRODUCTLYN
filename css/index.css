@@ -4,7 +4,7 @@ body, h1, h2, h3, h4, h5, h6, ul {
   margin: 0;
 }
 
-ul {
+ul, li {
   padding: 0;
   list-style: none;
 }
@@ -114,6 +114,7 @@ button {
 }
 .header__link:hover {
   text-shadow: 1px 4px 21px rgba(0, 0, 0, 0.6);
+  color: blue;
 }
 .header__linkble {
   color: black;
@@ -336,7 +337,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   margin-right: 20px;
   padding-left: 20px;
 }
-.hero__left {
+.hero__text {
   padding-top: 5%;
 }
 .hero__link {
@@ -357,7 +358,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     display: flex;
     flex-wrap: wrap;
   }
-  .hero__left {
+  .hero__text {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -377,14 +378,18 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   }
 }
 @media screen and (max-width: 479px) {
-  .hero__left {
-    width: 100%;
-  }
-  .hero__footer {
+  .hero__text {
     width: 100%;
   }
   .hero__img {
-    width: 500px;
+    width: 100%;
+  }
+  .hero__footer {
+    display: flex;
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 30px;
   }
 }
 .super {
@@ -403,9 +408,6 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   flex-wrap: wrap;
   max-width: 1400px;
 }
-.super__span {
-  padding-left: 70px;
-}
 .super__title {
   font-family: "Montserrat";
   font-style: normal;
@@ -413,7 +415,6 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   font-size: 45px;
   color: #2F281E;
   max-width: 700px;
-  padding-left: 390px;
 }
 .super__boxes {
   display: flex;
@@ -473,9 +474,18 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     justify-content: center;
     align-items: center;
   }
+  .super__divide {
+    text-align: center;
+  }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 500px) {
+  .super__content {
+    text-align: center;
+  }
   .super__boxes {
+    text-align: center;
+  }
+  .super__divide {
     text-align: center;
   }
 }
@@ -560,4 +570,21 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     flex-wrap: wrap;
     padding: 0;
   }
+}
+.oval__content {
+  display: flex;
+  background: url(../img/oval/Oval.png) center;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+.oval__main {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+.oval__text {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }/*# sourceMappingURL=index.css.map */

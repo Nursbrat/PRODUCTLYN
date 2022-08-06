@@ -13,12 +13,10 @@
     flex-wrap: wrap;
     max-width: 1400px;
   }
-  &__span {
-    padding-left: 70px;
-  }
+  
   &__title {
     @include subtitle();
-    padding-left: 390px;
+   
   }
   &__boxes {
     display: flex;
@@ -70,11 +68,20 @@
       justify-content: center;
       align-items: center;
     }
+    &__divide {
+      text-align: center;
+    }
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 500px) {
   .super {
+    &__content{
+      text-align: center;
+    }
     &__boxes {
+      text-align: center;
+    }
+    &__divide{
       text-align: center;
     }
   }
