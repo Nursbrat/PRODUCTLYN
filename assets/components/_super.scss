@@ -1,11 +1,17 @@
 .super {
+  padding-bottom: 30px;
+  background: url(../img/superpower/semi-oval.svg) center center / cover;
   &__content {
     position: relative;
     padding-top: 48px;
   }
   &__divide {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 1400px;
   }
   &__span {
     padding-left: 70px;
@@ -16,10 +22,12 @@
   }
   &__boxes {
     display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 20px;
   }
-  &__box {
-    padding-left: 88px;
-  }
+
   &__subtitle {
     @include name();
     padding-top: 37px;
@@ -31,12 +39,43 @@
   &__icon {
     padding-top: 59px;
   }
+  &__img {
+    max-width: 500px;
+    max-width: 100%;
+  }
   &__btn-content {
     display: flex;
     justify-content: center;
     align-content: center;
   }
   &__btn {
-    @include btn();
+    background-color: rgb(255, 153, 0);
+    margin-top: 62px;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(255, 153, 0);
+    border-image: initial;
+    padding: 26px 28px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .super {
+    &__img {
+      max-width: 500px;
+      max-width: 100%;
+    }
+    &__boxes {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .super {
+    &__boxes {
+      text-align: center;
+    }
   }
 }

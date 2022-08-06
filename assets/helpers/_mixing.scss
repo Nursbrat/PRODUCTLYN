@@ -20,7 +20,7 @@
   font-weight: 700px;
   font-size: 45px;
   color: $title;
-  width: 550px;
+  max-width: 550px;
 }
 
 @mixin subtitle {
@@ -49,13 +49,15 @@
 }
 @mixin btn {
   border-radius: 5px;
-  padding: 21px 30px;
+  padding: 20px 55px;
   background-color: orange;
   border: 1px solid orange;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+
 @mixin linkbtn{
   font-family: "Montserrat";
   font-style: normal;

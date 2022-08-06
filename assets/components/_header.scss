@@ -78,69 +78,18 @@
     color: black;
   }
 }
-// .burger {
-//   display: none;
 
-//   &__line {
-//     width: 30px;
-//     height: 5px;
-//     background: #000;
-//     margin: 3px 0;
-//     display: block;
-//   }
-
-//   &__menu {
-//     position: absolute;
-//     right: 0;
-//     top: 30px;
-//   }
-
-//   &__list {
-//     padding: 40px 0;
-//     width: 50vw;
-//     height: 60vh;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-//     text-align: center;
-//     background: rgb(83, 60, 60);
-//     display: none;
-//   }
-
-//   &__close {
-//     display: none;
-//     cursor: alias;
-//   }
-//   &__btns {
-//     display: none;
-//     position: absolute;
-//     left: 100px;
-//   }
-
-//   &.active &__close {
-//     font-size: 25px;
-//     font-weight: 900;
-//     display: block;
-//   }
-
-//   &.active &__nav {
-//     display: flex;
-//   }
-
-//   &.active &__line {
-//     display: none;
-//   }
-//   &.active &__btns {
-//     display: block;
-//   }
-// }
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
-html, body {
-    overflow-x: hidden;
-    height: 100%;
+// html, body {
+//     overflow-x: hidden;
+//     height: 100%;
+// }
+.burger{
+  overflow-x: hidden;
+  height: 100%;
 }
 
-.burger {
+.burger__header {
   display: none;
    text-align: center;
     margin: 0 auto;
@@ -154,26 +103,7 @@ html, body {
     z-index: 10;
    
 }
-.main {
-    margin: 0 auto;
-    display: block;
-    height: 100%;
-    margin-top: 60px;
-    
-}
-.mainInner{
-    display: table;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-}
-.mainInner div{
-    display:table-cell;
-    vertical-align: middle;
-    font-size: 3em;
-    font-weight: bold;
-    letter-spacing: 1.25px;
-}
+
 #sidebarMenu {
   display: none;
     height: 100%;
@@ -238,6 +168,7 @@ input[type=checkbox] {
     left: 15px;
     height: 22px;
     width: 22px;
+    position: fixed;
 }
 .spinner {
     transition: all 0.3s;
@@ -304,8 +235,16 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   }
   #sidebarMenu {
     display: block;
+    
   }
   .spinner{
     display: block;
+    
+
+
   }
-}
+  .burger__header{
+    display: block;
+  }
+    }
+                                          
