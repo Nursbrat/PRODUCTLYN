@@ -1,14 +1,13 @@
 .super {
   &__content {
     position: relative;
-    max-width: 1300px;
     padding-top: 48px;
   }
   &__divide {
     display: flex;
     flex-direction: column;
   }
-  &__span{
+  &__span {
     padding-left: 70px;
   }
   &__title {
@@ -17,11 +16,9 @@
   }
   &__boxes {
     display: flex;
-    
   }
   &__box {
     padding-left: 88px;
-    
   }
   &__subtitle {
     @include name();
@@ -34,19 +31,12 @@
   &__icon {
     padding-top: 59px;
   }
-  &__btn-content{
+  &__btn-content {
     display: flex;
     justify-content: center;
     align-content: center;
-  &__btn{
-    @include btn();
-
   }
-
-  &__semi-oval{
-   border: solid red;
-    position:absolute;
-    top:0;
-    left: 0;
+  &__btn {
+    @include btn();
   }
 }
