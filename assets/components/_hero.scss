@@ -19,15 +19,14 @@
     &:hover {
       box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
       transform: translateY(-0.5em);
-      &:focus {
-        background-color: red;
-      }
+   
     }
   }
   &__start {
     color: white;
+  
   }
-  &__box-img {
+  &__box-img { 
     max-width: 602px;
   }
   &__img {
@@ -48,12 +47,17 @@
     padding-top: 30px;
   }
 }
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1002px) {
   .hero {
     margin-top: 30px;
+    text-align: center;
+    padding-left: 0%;
+    
     &__content {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
     }
     &__text {
       display: flex;
@@ -79,6 +83,7 @@
   .hero {
     &__text {
       width: 100%;
+      text-align: center;
     }
     // &__footer {
     //   // width: 100%;
@@ -91,9 +96,6 @@
       display: flex;
       flex-direction: column;
     }
-    
-
-  
   }
   h1{
     font-size: 30px;

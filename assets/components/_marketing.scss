@@ -1,0 +1,35 @@
+.marketing {
+  margin-top: 280px;
+  &__swiper {
+    margin-top: 29px;
+    display: flex;
+    justify-content: center;
+  }
+  &__title {
+    @include subtitle();
+    font-size: 30px;
+  }
+  &__des {
+    @include page();
+    color: #544837;
+  }
+  &__author {
+    @include page();
+  }
+  &__span {
+    color: black;
+    font-weight: 200px;
+    font-size:20px;
+
+  }
+  &__info{
+    @include subtitle();
+    font-size: 25px;
+    max-width: 330px;
+    transition: .3s ease-in-out;
+    &:hover{
+        color: orange;
+    }
+
+  }
+}

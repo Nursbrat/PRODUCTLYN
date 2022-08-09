@@ -1,20 +1,160 @@
 .oval {
+  background: url(../img/oval/Oval.png) center center/cover;
+  margin-top: 191px;
+  padding: 20px;
+  border-radius: 20px;
   &__content {
-    display: flex;
-    background: url(../img/oval/Oval.png) center;
-    max-width: 1250px;
-    margin: 0 auto;
+    position: relative;
+    margin-top: 240px;
   }
 
   &__main {
     max-width: 1250px;
     margin: 0 auto;
   }
+
   &__text {
-    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
+  }
+  &__textnicon {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__text.icon {
+    width: 98px;
+    height: 98px;
+  }
+
+  &__title {
+    @include subtitle();
+    text-align: center;
+    // min-width: 500px;
+  }
+  &__des {
+    @include page();
+    max-width: 600px;
+    text-align: center;
+    color: #567592;
+  }
+  &__btn {
+    @include btn();
+    margin-top: 36px;
+    transition: .3s;
+    &:hover {
+      box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+      transform: translateY(-0.5em);
+    }
+  }
+  &__link {
+    @include linkbtn();
+  }
+
+  &__nav {
+    max-width: 1300x;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__glassesblack {
+    margin-top: 147px;
+  }
+
+  &__photohoodie {
+    text-align: center;
+    padding-left: 250px;
+  }
+  &__textnicon {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__text.pitcher {
+    margin-right: 150px;
+    margin-bottom: 150px;
+  }
+  &__text.strategist {
+    margin-bottom: 300px;
+  }
+  &__glassesblack {
+    display: none;
+  }
+
+  &__icon.prototyper {
+    position: relative;
+    margin-top: 24px;
+    cursor: pointer;
+  }
+  &__icon.prototyper::before {
+    content: "us";
+
+    position: absolute;
+    background-color: gray;
+    padding: 1em 3em;
+    color: white;
+    border-radius: 5px;
+    font-size: 0.8em;
+    bottom: 0;
+    left: 0;
+    white-space: nowrap;
+    transform: scale(0);
+    transition: 0.3s transform ease-out 150ms, bottom ease-out 150ms;
+    &:hover::after {
+      transform: scale(1);
+      bottom: 100%;
+    }
+    &__icon.definer {
+      margin-top: 146px;
+    }
+    &__icon.prototyper {
+      margin-top: 34px;
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .oval {
+    &__btn {
+      width: 50wmax;
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .oval {
+    border-radius: 0%;
+    &__photohoodie {
+      padding-left: 0px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+  }
+}
+@media screen and (max-width: 701px) {
+  .oval {
+    &__glassesblack {
+      display: block;
+      margin-top: 20px;
+      row-gap: 20px;
+      column-gap: 20px;
+    }
+    &__text.pitcher {
+      display: none;
+    }
+    &__text.strategist {
+      display: none;
+    }
+    &__photohoodie{
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      row-gap: 20px;
+      columns: 20px;
+    }
   }
 }
