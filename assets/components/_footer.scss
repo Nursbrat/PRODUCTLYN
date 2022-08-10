@@ -1,0 +1,41 @@
+.footer {
+  margin-top: 244px;
+
+  &__content {
+    padding-top: 105px;
+    padding-bottom:109px;
+    display: flex;
+    justify-content: space-between; 
+    border-top: solid #bcd0e5; 
+
+  }
+  &__text {
+    display: flex;
+    padding-top: 55px;
+   justify-content: space-around;
+   width: 100%;
+  }
+  &__nav {
+    display: flex;
+    justify-content: space-around;
+    max-width: 400px;
+    
+  }
+  &__link{
+   display: flex;
+  margin: 15px;
+  @include page();
+  }
+  &__btn{
+    @include btn();
+    margin-top:24px; 
+  }
+  &__btn-link{
+    @include linkbtn();
+  }
+  &__search{
+    transform: scale(1);
+
+  }
+
+}

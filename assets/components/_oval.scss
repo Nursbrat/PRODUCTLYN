@@ -3,9 +3,11 @@
   margin-top: 191px;
   padding: 20px;
   border-radius: 20px;
+  border-width: 200px;
   &__content {
     position: relative;
     margin-top: 240px;
+    text-align: center;
   }
 
   &__main {
@@ -45,7 +47,7 @@
   &__btn {
     @include btn();
     margin-top: 36px;
-    transition: .3s;
+    transition: 0.3s;
     &:hover {
       box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
       transform: translateY(-0.5em);
@@ -76,7 +78,6 @@
     justify-content: space-between;
   }
   &__text.pitcher {
-    margin-right: 150px;
     margin-bottom: 150px;
   }
   &__text.strategist {
@@ -87,33 +88,36 @@
   }
 
   &__icon.prototyper {
-    position: relative;
     margin-top: 24px;
     cursor: pointer;
+    &:hover {
+      &::before {
+        transform: scale(1);
+        bottom: 100%;
+      }
+    }
   }
-  &__icon.prototyper::before {
-    content: "us";
+  &__icon {
+    &.prototyper::before {
+      content: "us";
+      position: absolute;
+      background-color: gray;
+      padding: 1em 3em;
+      color: white;
+      border-radius: 5px;
+      font-size: 0.8em;
+      bottom: 0;
+      left: 0;
+      white-space: nowrap;
+      transform: scale(0);
+      transition: 0.3s transform ease-out 150ms, bottom ease-out 150ms;
 
-    position: absolute;
-    background-color: gray;
-    padding: 1em 3em;
-    color: white;
-    border-radius: 5px;
-    font-size: 0.8em;
-    bottom: 0;
-    left: 0;
-    white-space: nowrap;
-    transform: scale(0);
-    transition: 0.3s transform ease-out 150ms, bottom ease-out 150ms;
-    &:hover::after {
-      transform: scale(1);
-      bottom: 100%;
-    }
-    &__icon.definer {
-      margin-top: 146px;
-    }
-    &__icon.prototyper {
-      margin-top: 34px;
+      &__icon.definer {
+        background-color: black;
+      }
+      &__icon.prototyper {
+        margin-top: 34px;
+      }
     }
   }
 }
@@ -149,12 +153,43 @@
     &__text.strategist {
       display: none;
     }
-    &__photohoodie{
+    &__features {
       display: flex;
-      justify-content: space-around;
+      flex-flow: column;
+      gap: 40px;
+      margin-top: 20px;
+    }
+
+    &__photohoodie {
+      display: flex;
+      flex-flow: column;
       flex-wrap: wrap;
       row-gap: 20px;
       columns: 20px;
+    }
+    &__icon.definer {
+      margin-bottom: 120px;
+    }
+  }
+}
+
+.test {
+  width: 500px;
+  height: 500px;
+  background: green;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: green;
+    left: 0;
+    top: 0;
+  }
+  &:hover {
+    &::before {
+      background: yellow;
     }
   }
 }

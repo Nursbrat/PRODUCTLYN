@@ -24,6 +24,7 @@
     flex-wrap: wrap;
     row-gap: 20px;
     column-gap: 20px;
+    text-align: center;
   }
 
   &__subtitle {
@@ -62,6 +63,7 @@
     }
   }
 }
+  
 @media screen and (max-width: 1000px) {
   .super {
     &__content{

@@ -1,6 +1,33 @@
-const burger = document.querySelector(".burger");
-const burgerMenu = document.querySelector(".burger__menu");
+ 
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        slidesPerGroup: 3,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
 
-burgerMenu.addEventListener("click", () => {
-    burger.classList.toggle("active")
-});
+      var swiper = new Swiper(".marketing__swiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        loop:true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }});    
