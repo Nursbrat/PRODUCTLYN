@@ -331,8 +331,8 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 .hero__box-img {
   max-width: 602px;
   position: relative;
-  -webkit-animation: jumpers 2s infinite --2s 1;
-          animation: jumpers 2s infinite --2s 1;
+  -webkit-animation: jumpers, -1 forwards;
+          animation: jumpers, -1 forwards;
 }
 .hero__img {
   margin-right: 20px;
@@ -353,19 +353,19 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 
 @-webkit-keyframes jumpers {
   from {
-    left: -200px;
+    top: 0px;
   }
   to {
-    left: 200px;
+    top: 200px;
   }
 }
 
 @keyframes jumpers {
   from {
-    left: -200px;
+    top: 0px;
   }
   to {
-    left: 200px;
+    top: 200px;
   }
 }
 @media screen and (max-width: 1002px) {
@@ -847,9 +847,6 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 }
 .marketing__img {
   border-radius: 14px;
-  opacity: 0.7;
-}
-.marketing__img:hover {
   opacity: 1;
 }
 .marketing__info {
@@ -869,6 +866,45 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 }
 .marketing__info:focus {
   cursor: progress;
+}
+.marketing__pic-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 2rem;
+  color: red;
+  opacity: 0;
+  transition: opacity ease-out 250ms;
+}
+.marketing__pic {
+  position: relative;
+  margin: 1em;
+  background: gray;
+}
+.marketing__pic::before, .marketing__pic::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  transition: transform ease-out 250ms;
+}
+.marketing__pic::before {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  transform: scale(1, 0);
+}
+.marketing__pic::after {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  transform: scale(1, 0);
+}
+.marketing__pic:hover::before {
+  transform: scale(1.05, 1);
+}
+.marketing__pic:hover::after {
+  transform: scale(1, 1.05);
 }
 
 .swiper {
