@@ -71,6 +71,7 @@
   &-pagination-bullet {
     color: orange;
   }
+ 
 }
 .swiper.marketing__swiper {
   display: none;
@@ -141,5 +142,16 @@
   .swiper.marketing__swiper {
     
     display: block;
+  }
+ 
+}
+.marketing{
+  
+
+  &__pic{
+    max-width: 700px;
+  }
+  &__img{
+    width: 100%;
   }
 }

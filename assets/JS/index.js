@@ -4,6 +4,10 @@
         spaceBetween: 30,
         slidesPerGroup: 3,
         loop: true,
+        autoplay: {
+          delay: 3300,
+          disableOnInteraction: true,
+        },
         loopFillGroupWithBlank: true,
         pagination: {
           el: ".swiper-pagination",
