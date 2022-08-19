@@ -847,6 +847,9 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 }
 .marketing__img {
   border-radius: 14px;
+  opacity: 0.8;
+}
+.marketing__img:hover {
   opacity: 1;
 }
 .marketing__info {

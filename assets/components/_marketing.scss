@@ -19,7 +19,10 @@
   }
   &__img {
     border-radius: 14px;
-    opacity: 1;
+    opacity: .8;
+    &:hover{
+      opacity: 1;
+    }
  
   }
   &__info {
